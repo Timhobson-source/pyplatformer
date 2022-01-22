@@ -1,4 +1,5 @@
 import pygame
+from pyplatformer.level_builder import build_level, level_example
 
 from pyplatformer.window import WindowManager
 
@@ -29,8 +30,7 @@ class Game:
         return window
 
     def setup(self, window_manager: WindowManager):
-        example = window_manager.create_sprite(250, 250, 10, 10, 'red')
-        window_manager.draw(example)
+        build_level(level_example, window_manager, block_size=50)
 
     def play(self) -> None:
         meta = GameMeta()

@@ -8,7 +8,6 @@ class WindowManager:
         self.window = window
 
     def update_window(self) -> None:
-        self.window.blit()
         pygame.display.update()
 
     def display_game_over(self) -> None:

@@ -1,0 +1,1 @@
+This is intended to be a project to simplify the interface for creating platform games in pygame. This project will be a success if someone with reasonable python skills will be able to create a simple platformer level in less than half an hour after installing the package/cloning the repo. This may have already been done, but I thought this would be a fun project.
