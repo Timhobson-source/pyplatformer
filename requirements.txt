@@ -4,5 +4,13 @@
 #
 #    pip-compile requirements.in
 #
+mypy==0.931
+    # via -r requirements.in
+mypy-extensions==0.4.3
+    # via mypy
 pygame==2.1.2
     # via -r requirements.in
+tomli==2.0.0
+    # via mypy
+typing-extensions==4.0.1
+    # via mypy
