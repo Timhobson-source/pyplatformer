@@ -17,7 +17,7 @@ class WindowManager:
         raise NotImplementedError
 
     def draw(self, sprite: Sprite) -> None:
-        pygame.draw.rect(self.window, sprite.color, sprite.shape())
+        pygame.draw.rect(self.window, sprite.rgb, sprite.shape())
 
     def create_sprite(self, x: int, y: int, width: int, height: int, color: str) -> Sprite:
         return Sprite(x, y, width, height, color)

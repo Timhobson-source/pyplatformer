@@ -21,7 +21,7 @@ class GameMeta:
 class Game:
     def __init__(self) -> None:
         pygame.init()
-        self.fps = 60
+        self.fps = 120
         self.clock = pygame.time.Clock()
 
     def create_window(self, width: int = 500, height: int = 500) -> pygame.Surface:
@@ -43,11 +43,16 @@ class Game:
         while playing:
             pygame.time.delay(50)
 
+            if any(event.type == pygame.QUIT for event in pygame.event.get()):
+                playing = False
+            if pygame.key.get_pressed()[pygame.K_q]:
+                playing = False
+
             if meta.game_over():
-                self.playing = False
+                playing = False
                 window.display_game_over_window()
             elif meta.game_won():
-                self.playing = False
+                playing = False
                 window.display_game_won()
 
             manager.update_window()

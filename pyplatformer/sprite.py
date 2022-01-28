@@ -13,3 +13,6 @@ class Sprite:
 
     def shape(self):
         return pygame.Rect(self.x, self.y, self.width, self.height)
+
+    def jump(self):
+        pass
