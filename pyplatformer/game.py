@@ -43,7 +43,8 @@ class Game:
         while playing:
             pygame.time.delay(50)
 
-            if any(event.type == pygame.QUIT for event in pygame.event.get()):
+            events = pygame.event.get()
+            if any(event.type == pygame.QUIT for event in events):
                 playing = False
             if pygame.key.get_pressed()[pygame.K_q]:
                 playing = False

@@ -12,6 +12,6 @@ color_to_rgb = dict(
 
 def get_rgb_from_color(color: str):
     try:
-        return color_to_rgb[color]
+        return color_to_rgb[color.upper()]
     except KeyError:
         raise ValueError("Color not supported.")
